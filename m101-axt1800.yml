@@ -1,17 +1,18 @@
 ---
 description: Add the LUCI application
 
-feeds:
-  - name: NueXini
-    path: ../feeds_dir/NueXini
+#feeds:
+#  - name: NueXini
+#    path: ../feeds_dir/NueXini
 
 packages:
   - dnsmasq-full
-  - luci-theme-argon-2102
-  - luci-app-argon-config
   - luci-app-ttyd
   - ttyd
   - iptables-mod-fullconenat
+  - luci-proto-nebula
+#  - luci-theme-argon-2102
+#  - luci-app-argon-config
 
 diffconfig: |
   CONFIG_PACKAGE_dnsmasq=n

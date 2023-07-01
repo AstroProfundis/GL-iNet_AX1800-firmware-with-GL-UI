@@ -17,7 +17,7 @@
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-git clone https://github.com/NueXini/NueXini_Packages.git $GITHUB_WORKSPACE/gl-infra-builder/feeds/NueXini
+#git clone https://github.com/NueXini/NueXini_Packages.git $GITHUB_WORKSPACE/gl-infra-builder/feeds/NueXini
 
 git clone -b master --single-branch https://github.com/LGA1150/openwrt-fullconenat $GITHUB_WORKSPACE/gl-infra-builder/feeds/glinet/fullconenat
 
