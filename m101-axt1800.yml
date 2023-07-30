@@ -1,21 +1,12 @@
 ---
-description: Add the LUCI application
-
-#feeds:
-#  - name: NueXini
-#    path: ../feeds_dir/NueXini
+description: Add custom applications for M101
 
 packages:
   - dnsmasq-full
   - luci-app-ttyd
   - ttyd
-  - iptables-mod-fullconenat
-  - luci-proto-nebula
-#  - luci-theme-argon-2102
-#  - luci-app-argon-config
 
 diffconfig: |
   CONFIG_PACKAGE_dnsmasq=n
   CONFIG_LUCI_LANG_zh_Hans=y
-  CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
   CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y

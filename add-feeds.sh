@@ -19,8 +19,8 @@
 
 #git clone https://github.com/NueXini/NueXini_Packages.git $GITHUB_WORKSPACE/gl-infra-builder/feeds/NueXini
 
-git clone -b master --single-branch https://github.com/LGA1150/openwrt-fullconenat $GITHUB_WORKSPACE/gl-infra-builder/feeds/glinet/fullconenat
+#git clone -b master --single-branch https://github.com/LGA1150/openwrt-fullconenat $GITHUB_WORKSPACE/gl-infra-builder/feeds/glinet/fullconenat
 
 # pushd wlan-ap/openwrt
- 
+
 # popd

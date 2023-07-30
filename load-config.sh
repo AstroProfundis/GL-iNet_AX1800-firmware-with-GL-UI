@@ -20,8 +20,8 @@ sed -i '$d' package/base-files/files/bin/config_generate
 # sed -i '$a uci set network.wwan.up=1' package/base-files/files/bin/config_generate
 # sed -i "19a \ \ \ \ \ \ \ \ list   network          'wwan' " package/network/config/firewall/files/firewall.config
 
-# 设置风扇35度起转
-echo "uci set glfan.@globals[0].temperature='35'" >> package/base-files/files/bin/config_generate
+# 设置风扇45度起转
+echo "uci set glfan.@globals[0].temperature='45'" >> package/base-files/files/bin/config_generate
 echo "uci set glfan.@globals[0].intergration='4'" >> package/base-files/files/bin/config_generate
 echo "uci set glfan.@globals[0].differential='20'" >> package/base-files/files/bin/config_generate
 echo "uci commit glfan" >> package/base-files/files/bin/config_generate
@@ -48,9 +48,9 @@ sed -i '$a uci commit' package/base-files/files/bin/config_generate
 # sed -i '1i root:$1$H\/ab6bvd$yWkIzUrKuLPTNHY9akBDC0:18988:0:99999:7:::'  package/base-files/files/etc/shadow
 
 # patch FULLCONENAT
-mkdir package/network/config/firewall/patches
-wget -P package/network/config/firewall/patches/ https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/fullconenat.patch
+#mkdir -p package/network/config/firewall/patches
+#wget -P package/network/config/firewall/patches/ https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/fullconenat.patch
 # Patch LuCI
-pushd feeds/luci
-wget -O- https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/luci.patch | git apply
-popd
+#pushd feeds/luci
+#wget -O- https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/luci.patch | git apply
+#popd
