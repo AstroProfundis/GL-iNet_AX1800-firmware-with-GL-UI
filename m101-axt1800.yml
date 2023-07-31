@@ -3,8 +3,11 @@ description: Add custom applications for M101
 
 packages:
   - dnsmasq-full
+  - nebula
+  - luci-app-wireguard
   - luci-app-ttyd
   - ttyd
+  - iptables-mod-fullconenat
 
 diffconfig: |
   CONFIG_PACKAGE_dnsmasq=n
