@@ -7,7 +7,6 @@ packages:
   - luci-app-wireguard
   - luci-app-ttyd
   - ttyd
-  - iptables-mod-fullconenat
 
 diffconfig: |
   CONFIG_PACKAGE_dnsmasq=n

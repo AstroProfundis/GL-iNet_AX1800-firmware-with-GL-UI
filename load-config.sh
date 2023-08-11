@@ -48,9 +48,9 @@ sed -i '$a uci commit' package/base-files/files/bin/config_generate
 # sed -i '1i root:$1$H\/ab6bvd$yWkIzUrKuLPTNHY9akBDC0:18988:0:99999:7:::'  package/base-files/files/etc/shadow
 
 # patch FULLCONENAT
-mkdir -p package/network/config/firewall/patches
-wget -P package/network/config/firewall/patches/ https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/fullconenat.patch
+#mkdir -p package/network/config/firewall/patches
+#wget -P package/network/config/firewall/patches/ https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/fullconenat.patch
 # Patch LuCI
 pushd feeds/luci
-wget -O- https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/luci.patch | git apply
+#wget -O- https://github.com/LGA1150/fullconenat-fw3-patch/raw/master/luci.patch | git apply
 popd
