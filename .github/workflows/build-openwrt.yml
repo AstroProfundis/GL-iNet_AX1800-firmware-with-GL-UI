@@ -74,6 +74,9 @@ jobs:
     - name: Download openwrt source code/拉取openwrt源码
       run: |
         cd gl-infra-builder
+        #sed -i 's/branch: main/branch: v2.6.0/g' configs/config-wlan-ap-5.4.yml
+        #sed -i '/revision/d' configs/config-wlan-ap-5.4.yml
+        #python3 setup.py -c configs/config-wlan-ap-5.4.yml
         python3 setup.py -c configs/config-wlan-ap.yml
 
     - name: Download feeds and Generate config file/拉取订阅文件并生成config文件
@@ -130,7 +133,7 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
-        #touch release.txt
+        echo "Build time: `date +"%Y-%m-%d %H:%M"`" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
