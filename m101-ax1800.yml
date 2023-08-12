@@ -4,6 +4,8 @@ description: Add custom applications for M101
 packages:
   - dnsmasq-full
   - nebula
+  - tinc
+  - wireguard-tools
   - luci-app-wireguard
   - luci-app-ttyd
   - ttyd
